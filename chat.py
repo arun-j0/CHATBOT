@@ -177,7 +177,7 @@ if st.button("Facing difficulties? Watch some tutorial"):
     if user_input:
         # Parse user query into concepts
         # Split the user query on commas, "and", and "or" with optional whitespace
-        concepts = [concept.strip()+"in Python" for concept in re.split(r'\s*,\s*|\s+and\s+|\s+or\s+', user_input)]
+        concepts = [concept.strip()+" in Python" for concept in re.split(r'\s*,\s*|\s+and\s+|\s+or\s+', user_input)]
         
         # Add "in Python" to single-word concepts
         final_concepts = [concept + " in Python" if len(concept.split()) == 1 else concept for concept in concepts]
